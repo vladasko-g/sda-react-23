@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import React, { createContext, useState } from "react";
 
 export const darkTheme = {
   colors: {
@@ -20,6 +20,27 @@ export const lightTheme = {
   borders: {
     radius: 6,
   },
+};
+
+export const ThemeProvider = ({ children }) => {
+  const [theme, setTheme] = useState(lightTheme);
+
+  const themeContext = {
+    values: theme,
+    toggleTheme: () => {
+      setTheme(theme => {
+        if (theme === lightTheme) return darkTheme;
+
+        return lightTheme;
+      });
+    },
+  };
+
+  return (
+    <ThemeContext.Provider value={themeContext}>
+      {children}
+    </ThemeContext.Provider>
+  );
 };
 
 export const ThemeContext = createContext(null);

@@ -2,7 +2,7 @@ import React from "react";
 
 import { useTheme } from "../hooks/useTheme";
 
-export const Card = ({ title, description }) => {
+export const Card = ({ title }) => {
   const theme = useTheme();
 
   return (
@@ -20,7 +20,6 @@ export const Card = ({ title, description }) => {
         }}
       >
         <h2 style={{ margin: 0, marginBottom: 12 }}>{title}</h2>
-        <p style={{ margin: 0 }}>{description}</p>
       </div>
     </section>
   );

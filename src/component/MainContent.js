@@ -1,20 +1,17 @@
 import React from "react";
 
 import { Content } from "./Content";
-import { Card } from "./Card";
+import { PaginationButtons } from "./PaginationButtons";
+import { Cards } from "./Cards";
+import { useTodos } from "../hooks/useTodos";
 
 export const MainContent = () => {
+  const { setPage, finalPage, page, todos } = useTodos();
+
   return (
     <Content>
-      <Card
-        title="Some title 1"
-        description="Some description some desc some desc some desc some desc"
-      />
-      <Card title="Some title 2" description="Some description some desc" />
-      <Card
-        title="Some title 3"
-        description="Some description some desc some desc some desc some desc some desc some desc"
-      />
+      <Cards data={todos} />
+      <PaginationButtons setPage={setPage} finalPag={finalPage} page={page} />
     </Content>
   );
 };
