@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import React, { useMemo, createContext, useState } from "react";
 
 export const darkTheme = {
   colors: {
@@ -25,16 +25,18 @@ export const lightTheme = {
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(lightTheme);
 
-  const themeContext = {
-    values: theme,
-    toggleTheme: () => {
-      setTheme(theme => {
-        if (theme === lightTheme) return darkTheme;
+  const themeContext = useMemo(() => {
+    return {
+      values: theme,
+      toggleTheme: () => {
+        setTheme(theme => {
+          if (theme === lightTheme) return darkTheme;
 
-        return lightTheme;
-      });
-    },
-  };
+          return lightTheme;
+        });
+      },
+    };
+  }, [theme]);
 
   return (
     <ThemeContext.Provider value={themeContext}>
