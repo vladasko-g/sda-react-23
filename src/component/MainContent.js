@@ -11,7 +11,7 @@ export const MainContent = () => {
   return (
     <Content>
       <Cards data={todos} />
-      <PaginationButtons setPage={setPage} finalPag={finalPage} page={page} />
+      <PaginationButtons setPage={setPage} finalPage={finalPage} page={page} />
     </Content>
   );
 };
