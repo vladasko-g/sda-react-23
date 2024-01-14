@@ -5,7 +5,7 @@ import { PaginationButtons } from "./PaginationButtons";
 import { Cards } from "./Cards";
 import { useTodos } from "../hooks/useTodos";
 
-export const MainContent = () => {
+export const ContentMain = () => {
   const { setPage, finalPage, page, todos } = useTodos();
 
   return (
