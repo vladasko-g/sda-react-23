@@ -2,7 +2,6 @@ const express = require("express");
 const path = require("path");
 
 const app = express();
-const distPath = path.join(__dirname, "dist");
 
 const PORT = 3006;
 
