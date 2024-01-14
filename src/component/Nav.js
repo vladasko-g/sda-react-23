@@ -9,16 +9,16 @@ export const Nav = () => {
     <nav>
       <List>
         <ListItem>
-          <Link href="/">Home</Link>
+          <Link href="#">Home</Link>
         </ListItem>
         <ListItem>
-          <Link href="/about">About</Link>
+          <Link href="#">About</Link>
         </ListItem>
         <ListItem>
-          <Link href="/contact/sales">Sales</Link>
+          <Link href="#">Sales</Link>
         </ListItem>
         <ListItem>
-          <Link href="/contact/general">Contact</Link>
+          <Link href="#">Contact</Link>
         </ListItem>
       </List>
     </nav>
