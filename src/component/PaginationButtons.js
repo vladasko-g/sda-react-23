@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useRef } from "react";
 
 import { Button } from "./Button";
 
+// Ref examples
 export const PaginationButtons = ({ setPage, page, finalPage = 20 }) => {
+  const someButton = useRef(null);
+
+  console.log(someButton);
+
   return (
     <div
       style={{
@@ -12,7 +17,9 @@ export const PaginationButtons = ({ setPage, page, finalPage = 20 }) => {
       }}
     >
       {page > 1 && (
-        <Button onClick={() => setPage(page => page - 1)}>Prev</Button>
+        <Button ref={someButton} onClick={() => setPage(page => page - 1)}>
+          Prev
+        </Button>
       )}
       {page < finalPage && (
         <Button onClick={() => setPage(page => page + 1)}>Next</Button>

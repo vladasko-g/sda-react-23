@@ -1,12 +1,14 @@
-import React from "react";
+import React, { forwardRef } from "react";
 
 import { useTheme } from "../hooks/useTheme";
 
-export const Button = ({ children, onClick, ...rest }) => {
+// Ref examples
+export const Button = forwardRef(({ children, onClick, ...rest }, ref) => {
   const theme = useTheme();
 
   return (
     <button
+      ref={ref}
       style={{
         padding: "8px 16px",
         border: "none",
@@ -20,4 +22,4 @@ export const Button = ({ children, onClick, ...rest }) => {
       {children}
     </button>
   );
-};
+});
