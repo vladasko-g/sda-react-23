@@ -4,9 +4,8 @@
 
 `npm i`
 
-2 run webpack to build JavaScript and CSS and watch for updates
+2 run local server and webpack to build JavaScript and CSS and watch for updates
 
-`npm run buildWatch`
+npm start
 
-3 go to the path of index.html in your browser and work on the application in /src directory
-
+3 go to http://localhost:3006 in your browser and work on the application in /src directory
