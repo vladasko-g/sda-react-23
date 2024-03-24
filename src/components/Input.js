@@ -1,10 +1,15 @@
 import React from "react";
 
-export const Input = ({ label, handleChange }) => {
+export const Input = ({ label, value, handleChange }) => {
   return (
     <div>
       <label htmlFor={`${label}-input`}>{label}</label>
-      <input id={`${label}-input`} type="text" onChange={handleChange} />
+      <input
+        value={value}
+        id={`${label}-input`}
+        type="text"
+        onChange={handleChange}
+      />
     </div>
   );
 };

@@ -13,11 +13,13 @@ export const Form = () => {
   return (
     <div>
       <Input
+        value={username}
         label="Username"
         handleChange={event => setUsername(event.target.value)}
       />
 
       <Input
+        value={password}
         label="Password"
         handleChange={event => setPassword(event.target.value)}
       />
